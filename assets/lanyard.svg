@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 540" width="100%" height="100%">
+  <defs>
+    <!-- Lanyard Strap Gradient -->
+    <linearGradient id="strapGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Metallic Ring Gradient -->
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+
+    <!-- Badge Card Glass Gradient -->
+    <linearGradient id="badgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1E1B4B" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Holographic Shine Gradient -->
+    <linearGradient id="holoShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#00D4FF" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#EC4899" stop-opacity="0.3"/>
+      <stop offset="55%" stop-color="#00D4FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="badgeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <linearGradient id="avatarBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600;700&amp;family=Outfit:wght@600;800;900&amp;display=swap');
+
+    .badge-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 20px;
+      fill: #FFFFFF;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      fill: #00D4FF;
+    }
+
+    .badge-sub {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      fill: #94A3B8;
+    }
+
+    .strap-text {
+      font-family: 'Fira Code', monospace;
+      font-weight: 700;
+      font-size: 10px;
+      fill: #FFFFFF;
+      letter-spacing: 3px;
+    }
+  </style>
+
+  <!-- SWINGING GROUP WITH DAMPED PENDULUM SMIL ANIMATION -->
+  <g transform="translate(170, 0)">
+    <animateTransform 
+      attributeName="transform" 
+      type="rotate" 
+      values="-7 170 0; 7 170 0; -4 170 0; 4 170 0; -2 170 0; 2 170 0; 0 170 0; -7 170 0" 
+      keyTimes="0; 0.25; 0.45; 0.65; 0.8; 0.9; 0.95; 1" 
+      dur="7s" 
+      repeatCount="indefinite"/>
+
+    <!-- LANYARD STRAP (Left & Right Straps originating from top) -->
+    <path d="M 140 0 L 158 120 L 164 120 L 150 0 Z" fill="url(#strapGrad)"/>
+    <path d="M 200 0 L 182 120 L 176 120 L 190 0 Z" fill="url(#strapGrad)"/>
+
+    <!-- Watermark text on strap -->
+    <text transform="translate(148, 60) rotate(82)" class="strap-text">CODEWITHHSQUARE</text>
+    <text transform="translate(188, 60) rotate(98)" class="strap-text">AI ENGINEER</text>
+
+    <!-- METALLIC CLASP & RING -->
+    <rect x="156" y="115" width="28" height="16" rx="4" fill="url(#metalGrad)"/>
+    <ellipse cx="170" cy="138" rx="14" ry="10" fill="none" stroke="url(#metalGrad)" stroke-width="4"/>
+    <rect x="162" y="145" width="16" height="18" rx="3" fill="url(#metalGrad)"/>
+
+    <!-- ID BADGE CARD CONTAINER -->
+    <g transform="translate(45, 160)">
+      <!-- Card Outer Shadow & Border Glow -->
+      <rect x="0" y="0" width="250" height="360" rx="18" fill="url(#badgeBg)" stroke="url(#avatarBorder)" stroke-width="2" filter="url(#badgeGlow)"/>
+
+      <!-- Top Lanyard Slot Hole -->
+      <rect x="105" y="10" width="40" height="8" rx="4" fill="#090D16" stroke="#334155" stroke-width="1"/>
+
+      <!-- Header Brand Banner -->
+      <rect x="15" y="30" width="220" height="36" rx="10" fill="#1E293B"/>
+      <text x="125" y="53" class="strap-text" text-anchor="middle" font-size="11" fill="#8B5CF6">
+        ⚡ CODEWITHHSQUARE ⚡
+      </text>
+
+      <!-- AVATAR PHOTO CONTAINER -->
+      <g transform="translate(125, 135)">
+        <!-- Outer Glowing Ring -->
+        <circle cx="0" cy="0" r="48" fill="none" stroke="url(#avatarBorder)" stroke-width="3" filter="url(#badgeGlow)">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Profile Image Avatar -->
+        <circle cx="0" cy="0" r="42" fill="#0F172A"/>
+        <!-- Embed Vector Headshot -->
+        <circle cx="0" cy="-6" r="18" fill="#FFD6A5"/>
+        <path d="M -18 -6 C -18 -22, 18 -22, 18 -6 Z" fill="#1E293B"/>
+        <!-- Glasses -->
+        <rect x="-14" y="-8" width="12" height="8" rx="2" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+        <rect x="2" y="-8" width="12" height="8" rx="2" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+        <line x1="-2" y1="-4" x2="2" y2="-4" stroke="#00D4FF" stroke-width="1.5"/>
+        <!-- Shoulders/Hoodie -->
+        <path d="M -30 36 C -30 18, 30 18, 30 36 Z" fill="#6366F1"/>
+      </g>
+
+      <!-- BADGE DETAILS -->
+      <text x="125" y="210" class="badge-name" text-anchor="middle">HAYAT ALI</text>
+      <text x="125" y="228" class="badge-title" text-anchor="middle">AI &amp; ML ENGINEER</text>
+      <text x="125" y="244" class="badge-sub" text-anchor="middle">FULL STACK DEVELOPER</text>
+
+      <!-- VERIFIED CHIP & STATUS -->
+      <g transform="translate(45, 260)">
+        <rect x="0" y="0" width="160" height="24" rx="12" fill="#1E293B" stroke="#334155"/>
+        <circle cx="15" cy="12" r="4" fill="#10B981">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="26" y="16" class="badge-sub" font-weight="700" fill="#10B981">VERIFIED CREATOR</text>
+        <text x="145" y="16" class="badge-sub" fill="#6366F1">ID: 786</text>
+      </g>
+
+      <!-- BARCODE AT BOTTOM -->
+      <g transform="translate(35, 300)">
+        <!-- Barcode lines -->
+        <rect x="0" y="0" width="3" height="30" fill="#E2E8F0"/>
+        <rect x="5" y="0" width="1" height="30" fill="#E2E8F0"/>
+        <rect x="8" y="0" width="4" height="30" fill="#E2E8F0"/>
+        <rect x="15" y="0" width="2" height="30" fill="#E2E8F0"/>
+        <rect x="20" y="0" width="5" height="30" fill="#E2E8F0"/>
+        <rect x="28" y="0" width="1" height="30" fill="#E2E8F0"/>
+        <rect x="32" y="0" width="3" height="30" fill="#E2E8F0"/>
+        <rect x="38" y="0" width="6" height="30" fill="#E2E8F0"/>
+        <rect x="47" y="0" width="2" height="30" fill="#E2E8F0"/>
+        <rect x="52" y="0" width="4" height="30" fill="#E2E8F0"/>
+        <rect x="59" y="0" width="1" height="30" fill="#E2E8F0"/>
+        <rect x="63" y="0" width="5" height="30" fill="#E2E8F0"/>
+        <rect x="71" y="0" width="2" height="30" fill="#E2E8F0"/>
+        <rect x="76" y="0" width="3" height="30" fill="#E2E8F0"/>
+        <rect x="82" y="0" width="6" height="30" fill="#E2E8F0"/>
+        <rect x="91" y="0" width="2" height="30" fill="#E2E8F0"/>
+        <rect x="96" y="0" width="4" height="30" fill="#E2E8F0"/>
+        <rect x="103" y="0" width="1" height="30" fill="#E2E8F0"/>
+        <rect x="107" y="0" width="5" height="30" fill="#E2E8F0"/>
+        <rect x="115" y="0" width="3" height="30" fill="#E2E8F0"/>
+        <rect x="121" y="0" width="2" height="30" fill="#E2E8F0"/>
+        <rect x="126" y="0" width="6" height="30" fill="#E2E8F0"/>
+        <rect x="135" y="0" width="1" height="30" fill="#E2E8F0"/>
+        <rect x="139" y="0" width="4" height="30" fill="#E2E8F0"/>
+        <rect x="146" y="0" width="2" height="30" fill="#E2E8F0"/>
+        <rect x="151" y="0" width="5" height="30" fill="#E2E8F0"/>
+        <rect x="159" y="0" width="3" height="30" fill="#E2E8F0"/>
+        <rect x="165" y="0" width="2" height="30" fill="#E2E8F0"/>
+        <rect x="170" y="0" width="4" height="30" fill="#E2E8F0"/>
+        <rect x="177" y="0" width="3" height="30" fill="#E2E8F0"/>
+
+        <text x="90" y="42" class="badge-sub" text-anchor="middle" font-size="9" fill="#64748B">
+          * HAYAT-ARRAY-AI-786 *
+        </text>
+      </g>
+
+      <!-- MOVING HOLOGRAPHIC REFLECTION SWEEP -->
+      <rect x="0" y="0" width="250" height="360" rx="18" fill="url(#holoShine)" pointer-events="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 210" width="100%" height="100%">
+  <defs>
+    <linearGradient id="trophyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+
+    <filter id="trGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title-tr {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      fill: #EC4899;
+      letter-spacing: 1px;
+    }
+
+    .tr-name {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      fill: #FFFFFF;
+    }
+
+    .tr-sub {
+      font-family: system-ui, -apple-system, 'Fira Code', monospace;
+      font-size: 10px;
+      fill: #94A3B8;
+    }
+
+    .tr-card-bg {
+      fill: #1E293B;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .title-tr { fill: #DB2777; }
+      .tr-name { fill: #1E293B; }
+      .tr-sub { fill: #475569; }
+      .tr-card-bg { fill: #F8FAFC; }
+    }
+  </style>
+
+  <!-- Frame -->
+  <rect width="540" height="210" rx="16" fill="url(#trophyBg)" stroke="#EC4899" stroke-width="2" filter="url(#trGlow)"/>
+
+  <!-- Title -->
+  <text x="24" y="36" class="title-tr">🏆 HONORS &amp; ACHIEVEMENTS</text>
+  <line x1="24" y1="46" x2="516" y2="46" stroke="#334155" stroke-width="1"/>
+
+  <!-- Trophy Cell 1: Hackathon Runner Up -->
+  <g transform="translate(24, 65)">
+    <rect width="150" height="125" rx="12" class="tr-card-bg" stroke="#F59E0B" stroke-width="1.5" filter="url(#trGlow)"/>
+    <text x="75" y="40" font-size="32" text-anchor="middle">🥈</text>
+    <text x="75" y="70" class="tr-name" text-anchor="middle">Runner-Up</text>
+    <text x="75" y="88" class="tr-sub" text-anchor="middle">EEG Hackathon</text>
+    <text x="75" y="104" class="tr-sub" text-anchor="middle" fill="#F59E0B">AI Epilepsy ML</text>
+  </g>
+
+  <!-- Trophy Cell 2: DSA Master -->
+  <g transform="translate(195, 65)">
+    <rect width="150" height="125" rx="12" class="tr-card-bg" stroke="#8B5CF6" stroke-width="1.5" filter="url(#trGlow)"/>
+    <text x="75" y="40" font-size="32" text-anchor="middle">⚔️</text>
+    <text x="75" y="70" class="tr-name" text-anchor="middle">DSA Grinder</text>
+    <text x="75" y="88" class="tr-sub" text-anchor="middle">263+ Solved</text>
+    <text x="75" y="104" class="tr-sub" text-anchor="middle" fill="#C084FC">Striver A-Z Sheet</text>
+  </g>
+
+  <!-- Trophy Cell 3: AI Architect -->
+  <g transform="translate(366, 65)">
+    <rect width="150" height="125" rx="12" class="tr-card-bg" stroke="#00D4FF" stroke-width="1.5" filter="url(#trGlow)"/>
+    <text x="75" y="40" font-size="32" text-anchor="middle">🤖</text>
+    <text x="75" y="70" class="tr-name" text-anchor="middle">AI Architect</text>
+    <text x="75" y="88" class="tr-sub" text-anchor="middle">RAG &amp; Agents</text>
+    <text x="75" y="104" class="tr-sub" text-anchor="middle" fill="#00D4FF">LangGraph / MCP</text>
+  </g>
+</svg>

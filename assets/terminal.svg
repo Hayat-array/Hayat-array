@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <linearGradient id="termBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+
+    <filter id="termGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;display=swap');
+
+    .term-font {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .term-prompt { fill: #EC4899; font-weight: 700; }
+    .term-host { fill: #00D4FF; font-weight: 700; }
+    .term-cmd { fill: #FACC15; font-weight: 600; }
+    .term-out { fill: #E2E8F0; }
+    .term-key { fill: #8B5CF6; }
+    .term-str { fill: #10B981; }
+    .term-num { fill: #F97316; }
+    .term-bool { fill: #3B82F6; }
+
+    .blink-cursor {
+      animation: blinkTerm 0.8s step-end infinite;
+    }
+    @keyframes blinkTerm {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @media (prefers-color-scheme: light) {
+      .term-out { fill: #1E293B; }
+      .term-host { fill: #2563EB; }
+      .term-cmd { fill: #D97706; }
+    }
+  </style>
+
+  <!-- Terminal Frame -->
+  <rect width="900" height="480" rx="16" fill="url(#termBg)" stroke="url(#termBorder)" stroke-width="2" filter="url(#termGlow)"/>
+
+  <!-- Terminal Window Header Bar -->
+  <rect width="900" height="40" rx="16" fill="#1E293B"/>
+  <rect y="30" width="900" height="10" fill="#1E293B"/>
+
+  <!-- macOS Control Buttons -->
+  <circle cx="24" cy="20" r="6" fill="#EF4444"/>
+  <circle cx="42" cy="20" r="6" fill="#F59E0B"/>
+  <circle cx="60" cy="20" r="6" fill="#10B981"/>
+
+  <!-- Title -->
+  <text x="450" y="24" class="term-font" font-size="12" fill="#94A3B8" text-anchor="middle" font-weight="600">
+    hayat@codewithhsquare:~ (zsh)
+  </text>
+
+  <!-- Terminal Content Lines -->
+  <g transform="translate(24, 70)" class="term-font">
+    <!-- Line 1: whoami -->
+    <text x="0" y="0">
+      <tspan class="term-prompt">user@hayat-array</tspan>:<tspan class="term-host">~</tspan>$ <tspan class="term-cmd">whoami</tspan>
+    </text>
+    <text x="0" y="22" class="term-out">
+      🚀 Hayat Ali | AI Engineer, Full Stack Developer &amp; Research Enthusiast
+    </text>
+
+    <!-- Line 2: cat skills.json -->
+    <text x="0" y="55">
+      <tspan class="term-prompt">user@hayat-array</tspan>:<tspan class="term-host">~</tspan>$ <tspan class="term-cmd">cat skills.json</tspan>
+    </text>
+
+    <g transform="translate(15, 75)">
+      <text x="0" y="0"><tspan fill="#94A3B8">{</tspan></text>
+      <text x="15" y="20"><tspan class="term-key">"name"</tspan>: <tspan class="term-str">"Hayat Ali"</tspan>,</text>
+      <text x="15" y="40"><tspan class="term-key">"brand"</tspan>: <tspan class="term-str">"CodeWithHSquare"</tspan>,</text>
+      <text x="15" y="60"><tspan class="term-key">"core_stack"</tspan>: <tspan fill="#94A3B8">[</tspan><tspan class="term-str">"Python"</tspan>, <tspan class="term-str">"PyTorch"</tspan>, <tspan class="term-str">"LangChain"</tspan>, <tspan class="term-str">"Next.js"</tspan><tspan fill="#94A3B8">]</tspan>,</text>
+      <text x="15" y="80"><tspan class="term-key">"ai_focus"</tspan>: <tspan fill="#94A3B8">[</tspan><tspan class="term-str">"LLMs"</tspan>, <tspan class="term-str">"RAG Stack"</tspan>, <tspan class="term-str">"Agentic AI (MCP)"</tspan>, <tspan class="term-str">"Multi-Agent"</tspan><tspan fill="#94A3B8">]</tspan>,</text>
+      <text x="15" y="100"><tspan class="term-key">"dsa_solved"</tspan>: <tspan class="term-num">263</tspan>,</text>
+      <text x="15" y="120"><tspan class="term-key">"streak_active"</tspan>: <tspan class="term-bool">true</tspan>,</text>
+      <text x="15" y="140"><tspan class="term-key">"target_companies"</tspan>: <tspan fill="#94A3B8">[</tspan><tspan class="term-str">"OpenAI"</tspan>, <tspan class="term-str">"Google DeepMind"</tspan>, <tspan class="term-str">"Anthropic"</tspan>, <tspan class="term-str">"NVIDIA"</tspan><tspan fill="#94A3B8">]</tspan></text>
+      <text x="0" y="160"><tspan fill="#94A3B8">}</tspan></text>
+    </g>
+
+    <!-- Line 3: execute mission -->
+    <text x="0" y="260">
+      <tspan class="term-prompt">user@hayat-array</tspan>:<tspan class="term-host">~</tspan>$ <tspan class="term-cmd">./run_mission.sh</tspan>
+    </text>
+    <text x="0" y="282" fill="#10B981" font-weight="600">
+      [SUCCESS] Initializing Neural Weights... RAG Index Online... Multi-Agent Swarm Ready.
+    </text>
+
+    <!-- Active Command Prompt -->
+    <text x="0" y="315">
+      <tspan class="term-prompt">user@hayat-array</tspan>:<tspan class="term-host">~</tspan>$ <tspan class="term-cmd">build_next_gen_ai()</tspan>
+    </text>
+    <rect x="235" y="303" width="9" height="16" fill="#00D4FF" class="blink-cursor"/>
+  </g>
+</svg>

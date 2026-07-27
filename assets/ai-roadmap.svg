@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="roadBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="roadLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="25%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="75%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+
+    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&amp;family=Outfit:wght@700;800&amp;display=swap');
+
+    .road-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      fill: #00D4FF;
+      letter-spacing: 1px;
+    }
+
+    .node-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      fill: #FFFFFF;
+    }
+
+    .node-sub {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      fill: #94A3B8;
+    }
+
+    .pulse-dot {
+      animation: pulseTrace 3s linear infinite;
+    }
+
+    @keyframes pulseTrace {
+      0% { stroke-dashoffset: 1000; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    @media (prefers-color-scheme: light) {
+      .road-title { fill: #4F46E5; }
+      .node-title { fill: #1E293B; }
+      .node-sub { fill: #475569; }
+    }
+  </style>
+
+  <!-- Container -->
+  <rect width="1100" height="360" rx="16" fill="url(#roadBg)" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="550" y="36" class="road-title" text-anchor="middle">
+    🗺️ HAYAT ALI'S AI &amp; ENGINEERING ROADMAP
+  </text>
+
+  <!-- CONNECTING CIRCUIT PATH (TOP ROW) -->
+  <path d="M 100 110 L 350 110 L 600 110 L 850 110 L 1000 110 Q 1030 110 1030 150 Q 1030 190 1000 190 L 850 250 L 600 250 L 350 250 L 100 250" 
+        fill="none" stroke="#1E293B" stroke-width="4"/>
+
+  <path d="M 100 110 L 350 110 L 600 110 L 850 110 L 1000 110 Q 1030 110 1030 150 Q 1030 190 1000 190 L 850 250 L 600 250 L 350 250 L 100 250" 
+        fill="none" stroke="url(#roadLine)" stroke-width="3" stroke-dasharray="15 10" class="pulse-dot"/>
+
+  <!-- TOP ROW NODES -->
+
+  <!-- Node 1: Programming -->
+  <g transform="translate(100, 110)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#3B82F6" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">💻</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">Programming</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">C++, Python, JS/TS</text>
+  </g>
+
+  <!-- Node 2: DSA & Algorithms -->
+  <g transform="translate(350, 110)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#00D4FF" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">⚡</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">DSA Mastery</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">263+ LeetCode Solved</text>
+  </g>
+
+  <!-- Node 3: Full Stack Dev -->
+  <g transform="translate(600, 110)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#8B5CF6" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">🌐</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">Full Stack Web</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">React, Next.js, Node</text>
+  </g>
+
+  <!-- Node 4: ML & Deep Learning -->
+  <g transform="translate(850, 110)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#EC4899" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">🧠</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">Machine Learning</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">PyTorch, TensorFlow</text>
+  </g>
+
+  <!-- BOTTOM ROW NODES -->
+
+  <!-- Node 5: LLMs & GenAI -->
+  <g transform="translate(850, 250)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#F59E0B" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">🤖</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">LLMs &amp; Transformers</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">PEFT, LoRA, Prompting</text>
+  </g>
+
+  <!-- Node 6: RAG Stack -->
+  <g transform="translate(600, 250)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#10B981" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">📚</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">RAG &amp; Vector DBs</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">LangChain, LlamaIndex</text>
+  </g>
+
+  <!-- Node 7: Agentic AI & MCP -->
+  <g transform="translate(350, 250)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#00D4FF" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">🛰️</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">Agentic AI &amp; MCP</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">Multi-Agent Swarms</text>
+  </g>
+
+  <!-- Node 8: Frontier AI Research -->
+  <g transform="translate(100, 250)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#6366F1" stroke-width="3" filter="url(#nodeGlow)"/>
+    <text x="0" y="6" font-size="20" text-anchor="middle">🏆</text>
+    <text x="0" y="48" class="node-title" text-anchor="middle">Frontier Research</text>
+    <text x="0" y="64" class="node-sub" text-anchor="middle">OpenAI / DeepMind</text>
+  </g>
+</svg>

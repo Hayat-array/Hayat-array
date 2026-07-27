@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <!-- Light Gradient Background -->
+    <linearGradient id="bgGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="40%" stop-color="#EEF2FF"/>
+      <stop offset="80%" stop-color="#F3E8FF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Glowing Text Gradients -->
+    <linearGradient id="titleGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="33%" stop-color="#7C3AED"/>
+      <stop offset="66%" stop-color="#DB2777"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <!-- Glassmorphism Card Fill Light -->
+    <linearGradient id="glassGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Scanner Gradient Light -->
+    <linearGradient id="scannerGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Clip Path -->
+    <clipPath id="bannerClipLight">
+      <rect width="1200" height="680" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;family=Outfit:wght@400;600;800;900&amp;display=swap');
+
+    .title-text-light {
+      font-family: 'Outfit', -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 52px;
+      fill: url(#titleGradLight);
+      letter-spacing: -1px;
+    }
+
+    .mono-text-light {
+      font-family: 'Fira Code', monospace;
+    }
+
+    .subtitle-role-light {
+      font-family: 'Fira Code', monospace;
+      font-size: 22px;
+      font-weight: 600;
+      fill: #4F46E5;
+    }
+
+    .pill-text-light {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      fill: #1E293B;
+    }
+
+    .code-text-light {
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .cursor-light {
+      animation: blinkLight 0.9s step-end infinite;
+    }
+    @keyframes blinkLight {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Outer Container -->
+  <g clip-path="url(#bannerClipLight)">
+    <!-- Base Background -->
+    <rect width="1200" height="680" rx="24" fill="url(#bgGradLight)"/>
+
+    <!-- Subtle Tech Grid Lines -->
+    <path d="M 0 80 L 1200 80 M 0 160 L 1200 160 M 0 240 L 1200 240 M 0 320 L 1200 320 M 0 400 L 1200 400 M 0 480 L 1200 480 M 0 560 L 1200 560" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 8" opacity="0.6"/>
+    <path d="M 150 0 L 150 680 M 300 0 L 300 680 M 450 0 L 450 680 M 600 0 L 600 680 M 750 0 L 750 680 M 900 0 L 900 680 M 1050 0 L 1050 680" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 8" opacity="0.6"/>
+
+    <!-- Ambient Light Glowing Orbs -->
+    <circle cx="150" cy="150" r="180" fill="#C7D2FE" opacity="0.5"/>
+    <circle cx="1050" cy="500" r="220" fill="#FBCFE8" opacity="0.5"/>
+    <circle cx="900" cy="180" r="140" fill="#BAE6FD" opacity="0.5"/>
+
+    <!-- Top Window Title Bar -->
+    <rect x="0" y="0" width="1200" height="48" fill="#E2E8F0" opacity="0.9"/>
+    <line x1="0" y1="48" x2="1200" y2="48" stroke="#CBD5E1" stroke-width="1"/>
+
+    <!-- macOS Window Buttons -->
+    <circle cx="28" cy="24" r="7" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="7" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="7" fill="#10B981"/>
+
+    <!-- Terminal Command Header Prompt -->
+    <text x="100" y="30" class="mono-text-light" font-size="14" fill="#475569">
+      hayat@codewithhsquare:~$ <tspan fill="#4F46E5">cat profile.json</tspan>
+    </text>
+    <rect x="360" y="16" width="9" height="18" fill="#4F46E5" class="cursor-light"/>
+
+    <!-- Right Window Status -->
+    <rect x="1040" y="14" width="130" height="22" rx="11" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <circle cx="1055" cy="25" r="4" fill="#10B981"/>
+    <text x="1066" y="29" class="mono-text-light" font-size="11" fill="#059669" font-weight="600">SYSTEM ONLINE</text>
+
+    <!-- Greeting Badge -->
+    <rect x="60" y="85" width="220" height="32" rx="16" fill="#FFFFFF" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="75" y="106" class="mono-text-light" font-size="13" fill="#4F46E5" font-weight="600">🚀 WELCOME TO MY REPO</text>
+
+    <!-- Main Name -->
+    <text x="60" y="175" class="title-text-light">HAYAT ALI</text>
+
+    <!-- Subtitle Role -->
+    <g transform="translate(60, 215)">
+      <text x="0" y="0" class="subtitle-role-light">
+        ⚡ <tspan fill="#E11D48">&gt;</tspan> 
+        <tspan fill="#2563EB">
+          <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;1" keyTimes="0;0.22;0.25;0.47;0.5;0.72;0.75;0.97;1" dur="12s" repeatCount="indefinite"/>
+          AI &amp; Machine Learning Engineer
+        </tspan>
+        <tspan fill="#7C3AED" dx="-360">
+          <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0" keyTimes="0;0.22;0.25;0.47;0.5;0.72;0.75;0.97;1" dur="12s" repeatCount="indefinite"/>
+          Full Stack Web Developer
+        </tspan>
+        <tspan fill="#DB2777" dx="-300">
+          <animate attributeName="opacity" values="0;0;0;0;1;1;0;0;0" keyTimes="0;0.22;0.25;0.47;0.5;0.72;0.75;0.97;1" dur="12s" repeatCount="indefinite"/>
+          RAG &amp; Agentic AI Specialist
+        </tspan>
+        <tspan fill="#059669" dx="-330">
+          <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.22;0.25;0.47;0.5;0.72;0.75;0.97;1" dur="12s" repeatCount="indefinite"/>
+          Research &amp; Open Source Enthusiast
+        </tspan>
+      </text>
+    </g>
+
+    <!-- Bio Line Snippets -->
+    <g transform="translate(60, 250)">
+      <text x="0" y="0" class="mono-text-light" font-size="14" fill="#334155">
+        🎓 CS Engineer @ India &amp; Full-Stack AI System Architect
+      </text>
+      <text x="0" y="24" class="mono-text-light" font-size="14" fill="#334155">
+        💡 Crafting Autonomous AI Agents, RAG Pipelines &amp; Scalable SaaS
+      </text>
+      <text x="0" y="48" class="mono-text-light" font-size="14" fill="#334155">
+        🎯 Aiming for Top Tech &amp; Global AI Research Labs (OpenAI / DeepMind)
+      </text>
+    </g>
+
+    <!-- Tech Stack Pills Row -->
+    <g transform="translate(60, 345)">
+      <rect x="0" y="0" width="105" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="14" y="22" class="pill-text-light">🐍 Python</text>
+
+      <rect x="117" y="0" width="115" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="131" y="22" class="pill-text-light">🔥 PyTorch</text>
+
+      <rect x="244" y="0" width="135" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="258" y="22" class="pill-text-light">🦜 LangChain</text>
+
+      <rect x="391" y="0" width="110" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="405" y="22" class="pill-text-light">⚛️ Next.js</text>
+
+      <rect x="513" y="0" width="135" height="34" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="527" y="22" class="pill-text-light">🤖 Agentic AI</text>
+    </g>
+
+    <!-- Quick Stats Bar Row -->
+    <g transform="translate(60, 410)">
+      <rect x="0" y="0" width="600" height="100" rx="16" fill="url(#glassGradLight)" stroke="#CBD5E1" stroke-width="1.5"/>
+
+      <g transform="translate(30, 25)">
+        <text x="0" y="25" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#2563EB">265+</text>
+        <text x="0" y="48" class="mono-text-light" font-size="12" fill="#64748B">DSA SOLVED</text>
+      </g>
+
+      <line x1="160" y1="20" x2="160" y2="80" stroke="#CBD5E1" stroke-width="1"/>
+
+      <g transform="translate(190, 25)">
+        <text x="0" y="25" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#DB2777">121🔥</text>
+        <text x="0" y="48" class="mono-text-light" font-size="12" fill="#64748B">DAY STREAK</text>
+      </g>
+
+      <line x1="310" y1="20" x2="310" y2="80" stroke="#CBD5E1" stroke-width="1"/>
+
+      <g transform="translate(340, 25)">
+        <text x="0" y="25" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#7C3AED">15+</text>
+        <text x="0" y="48" class="mono-text-light" font-size="12" fill="#64748B">PROJECTS SHIPPED</text>
+      </g>
+
+      <line x1="470" y1="20" x2="470" y2="80" stroke="#CBD5E1" stroke-width="1"/>
+
+      <g transform="translate(495, 25)">
+        <text x="0" y="25" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#059669">100%</text>
+        <text x="0" y="48" class="mono-text-light" font-size="12" fill="#64748B">AI FOCUS</text>
+      </g>
+    </g>
+
+    <!-- RIGHT COLUMN: Code Editor Card -->
+    <g transform="translate(700, 85)">
+      <rect x="0" y="0" width="440" height="420" rx="16" fill="#FFFFFF" stroke="#6366F1" stroke-width="2"/>
+      <rect x="0" y="0" width="440" height="38" rx="16" fill="#F1F5F9"/>
+      <circle cx="20" cy="19" r="5" fill="#EF4444"/>
+      <circle cx="36" cy="19" r="5" fill="#F59E0B"/>
+      <circle cx="52" cy="19" r="5" fill="#10B981"/>
+      <text x="180" y="24" class="mono-text-light" font-size="12" fill="#64748B">agent_loop.py</text>
+
+      <g transform="translate(20, 60)" class="code-text-light">
+        <text x="0" y="0" fill="#DB2777">import</text>
+        <text x="55" y="0" fill="#0F172A">openai, langchain, torch</text>
+
+        <text x="0" y="28" fill="#DB2777">class</text>
+        <text x="48" y="28" fill="#2563EB">AIEngineer</text>
+        <text x="145" y="28" fill="#64748B">(Developer):</text>
+
+        <text x="20" y="56" fill="#4F46E5">def</text>
+        <text x="55" y="56" fill="#D97706">__init__</text>
+        <text x="125" y="56" fill="#64748B">(self):</text>
+        <text x="40" y="80" fill="#0F172A">self.name = </text>
+        <text x="145" y="80" fill="#059669">"Hayat Ali"</text>
+        <text x="40" y="104" fill="#0F172A">self.brand = </text>
+        <text x="155" y="104" fill="#059669">"CodeWithHSquare"</text>
+        <text x="40" y="128" fill="#0F172A">self.stack = [</text>
+        <text x="155" y="128" fill="#059669">"LLMs", "RAG", "Agents"</text>
+        <text x="330" y="128" fill="#0F172A">]</text>
+
+        <text x="20" y="162" fill="#4F46E5">async def</text>
+        <text x="100" y="162" fill="#D97706">build_future</text>
+        <text x="200" y="162" fill="#64748B">(self):</text>
+        <text x="40" y="186" fill="#DB2777">while</text>
+        <text x="88" y="186" fill="#2563EB">True</text>
+        <text x="120" y="186" fill="#0F172A">:</text>
+
+        <text x="60" y="210" fill="#0F172A">await self.</text>
+        <text x="150" y="210" fill="#2563EB">learn_dsa_and_ml</text>
+        <text x="285" y="210" fill="#0F172A">()</text>
+        <text x="60" y="234" fill="#0F172A">await self.</text>
+        <text x="150" y="234" fill="#7C3AED">deploy_rag_agents</text>
+        <text x="295" y="234" fill="#0F172A">()</text>
+        <text x="60" y="258" fill="#0F172A">await self.</text>
+        <text x="150" y="258" fill="#DB2777">ship_production_ai</text>
+        <text x="305" y="258" fill="#0F172A">()</text>
+
+        <text x="60" y="292" fill="#94A3B8"># Goal: OpenAI / DeepMind / Top Tech</text>
+        <text x="60" y="316" fill="#DB2777">yield</text>
+        <text x="110" y="316" fill="#059669">"Impact the World 🚀"</text>
+      </g>
+    </g>
+
+    <!-- Footer Neon Banner -->
+    <g transform="translate(60, 560)">
+      <rect x="0" y="0" width="1080" height="60" rx="16" fill="#FFFFFF" stroke="url(#titleGradLight)" stroke-width="2"/>
+      <text x="540" y="38" font-family="'Outfit', sans-serif" font-weight="900" font-size="20" fill="#4F46E5" text-anchor="middle" letter-spacing="4">
+        ⚡ KEEP CODING • KEEP INNOVATING • SHAPING THE FUTURE OF AI ⚡
+      </text>
+    </g>
+
+    <!-- Scanner Beam -->
+    <rect x="0" y="0" width="1200" height="40" fill="url(#scannerGradLight)">
+      <animateTransform attributeName="transform" type="translate" from="0,-40" to="0,680" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

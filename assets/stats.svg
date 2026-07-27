@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 210" width="100%" height="100%">
+  <defs>
+    <!-- Dark Glass Gradient -->
+    <linearGradient id="statsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+
+    <!-- Neon Rank Ring Gradient -->
+    <linearGradient id="rankNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+
+    <!-- Border Glow Filter -->
+    <filter id="statsGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title-stats {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      fill: #00D4FF;
+      letter-spacing: 1px;
+    }
+
+    .lbl-stats {
+      font-family: system-ui, -apple-system, 'Fira Code', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      fill: #94A3B8;
+    }
+
+    .val-stats {
+      font-family: system-ui, -apple-system, 'Fira Code', monospace;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .rank-big {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 34px;
+      fill: #FFFFFF;
+    }
+
+    .rank-inner-bg {
+      fill: #090D16;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .title-stats { fill: #4F46E5; }
+      .lbl-stats { fill: #475569; }
+      .rank-big { fill: #1E293B; }
+      .rank-inner-bg { fill: #F8FAFC; }
+    }
+  </style>
+
+  <!-- Base Card Frame -->
+  <rect width="540" height="210" rx="16" fill="url(#statsBg)" stroke="#6366F1" stroke-width="2" filter="url(#statsGlow)"/>
+
+  <!-- Title Header -->
+  <text x="24" y="36" class="title-stats">⚡ GITHUB &amp; DSA STATS</text>
+  <line x1="24" y1="46" x2="516" y2="46" stroke="#334155" stroke-width="1"/>
+
+  <!-- Left Column: Animated Rank Circle -->
+  <g transform="translate(85, 126)">
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#1E293B" stroke-width="7"/>
+    <circle cx="0" cy="0" r="46" fill="none" stroke="url(#rankNeon)" stroke-width="7" stroke-dasharray="220 70" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="36" class="rank-inner-bg"/>
+    <text x="0" y="11" class="rank-big" text-anchor="middle">S+</text>
+    <text x="0" y="64" class="lbl-stats" text-anchor="middle" font-size="10" fill="#00D4FF">TOP 5% ACTIVE</text>
+  </g>
+
+  <!-- Vertical Separation Line -->
+  <line x1="170" y1="58" x2="170" y2="192" stroke="#334155" stroke-width="1"/>
+
+  <!-- Right Column: Two-Column Non-Overlapping Grid -->
+  <g transform="translate(192, 60)">
+    <!-- Row 1: Total DSA Solved -->
+    <text x="0" y="20" class="lbl-stats">Total DSA Solved:</text>
+    <text x="145" y="20" class="val-stats" fill="#00D4FF">263+ (Striver A-Z)</text>
+
+    <!-- Row 2: Active Daily Streak -->
+    <text x="0" y="46" class="lbl-stats">Active Streak:</text>
+    <text x="145" y="46" class="val-stats" fill="#EC4899">121 Days 🔥</text>
+
+    <!-- Row 3: Public Repositories -->
+    <text x="0" y="72" class="lbl-stats">Public Repositories:</text>
+    <text x="145" y="72" class="val-stats" fill="#FACC15">45+ Repositories</text>
+
+    <!-- Row 4: Total Commits -->
+    <text x="0" y="98" class="lbl-stats">Total Commits (Year):</text>
+    <text x="145" y="98" class="val-stats" fill="#10B981">603+ Commits</text>
+
+    <!-- Row 5: AI & RAG Focus -->
+    <text x="0" y="124" class="lbl-stats">AI / RAG Focus:</text>
+    <text x="145" y="124" class="val-stats" fill="#8B5CF6">Production Ready 🚀</text>
+  </g>
+</svg>

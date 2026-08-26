@@ -2,8 +2,8 @@
 
 <!-- HERO BANNER WITH DYNAMIC LIGHT & DARK THEME SWITCHING -->
 <p align="center">
-  <img src="assets/banner-dark.svg?v=1787620647#gh-dark-mode-only" alt="Hayat Ali Hero Banner (Dark Mode)" width="100%" />
-  <img src="assets/banner-light.svg?v=1787620647#gh-light-mode-only" alt="Hayat Ali Hero Banner (Light Mode)" width="100%" />
+  <img src="assets/banner-dark.svg?v=1787707200#gh-dark-mode-only" alt="Hayat Ali Hero Banner (Dark Mode)" width="100%" />
+  <img src="assets/banner-light.svg?v=1787707200#gh-light-mode-only" alt="Hayat Ali Hero Banner (Light Mode)" width="100%" />
 </p>
 
 <br/>
@@ -20,7 +20,7 @@
 
 <!-- SWINGING LANYARD ID BADGE -->
 <p align="center">
-  <img src="assets/lanyard.svg?v=1787620647" width="320" alt="Hayat Ali Interactive ID Badge" />
+  <img src="assets/lanyard.svg?v=1787707200" width="320" alt="Hayat Ali Interactive ID Badge" />
 </p>
 
 <!-- DYNAMIC TYPING HEADER WITH LIGHT/DARK THEME SUPPORT -->
@@ -602,7 +602,7 @@
 ## 🗺️ Interactive AI Learning &amp; Skills Roadmap
 
 <p align="center">
-  <img src="assets/ai-roadmap.svg?v=1787620647" width="100%" alt="Hayat Ali AI Skill Progression Roadmap" />
+  <img src="assets/ai-roadmap.svg?v=1787707200" width="100%" alt="Hayat Ali AI Skill Progression Roadmap" />
 </p>
 
 </div>
@@ -707,14 +707,14 @@
 <br/>
 
 <p align="center">
-  <img src="assets/stats.svg?v=1787620647" width="49%" alt="Local GitHub Metrics Card" />
-  <img src="assets/languages.svg?v=1787620647" width="49%" alt="Local Language Usage Card" />
+  <img src="assets/stats.svg?v=1787707200" width="49%" alt="Local GitHub Metrics Card" />
+  <img src="assets/languages.svg?v=1787707200" width="49%" alt="Local Language Usage Card" />
 </p>
 
 <br/>
 
 <p align="center">
-  <img src="assets/trophies.svg?v=1787620647" width="98%" alt="Local Trophies Card" />
+  <img src="assets/trophies.svg?v=1787707200" width="98%" alt="Local Trophies Card" />
 </p>
 
 <br/>
